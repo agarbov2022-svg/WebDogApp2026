@@ -1,6 +1,67 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+@{
+    ViewData["Title"] = "Accessories";
+}
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Аксесоари за кучета</h1>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Product 1 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/dog2.jpg"
+                     class="card-img-top"
+                     alt="Нагръдник"
+                     style="height: 250px; object-fit: cover;">
+
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Ергономичен нагръдник</h5>
+                    <p class="card-text fw-bold text-primary fs-5">
+                        Цена: 45.00 euro
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/images.jfif"
+                     class="card-img-top"
+                     alt="Повод"
+                     style="height: 250px; object-fit: cover;">
+
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Автоматичен повод (5м)</h5>
+                    <p class="card-text fw-bold text-primary fs-5">
+                        Цена: 30.00 euro
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/dog3.jfif"
+                     class="card-img-top"
+                     alt="Легло"
+                     style="height: 250px; object-fit: cover;">
+
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Ортопедично легло</h5>
+                    <p class="card-text fw-bold text-primary fs-5">
+                        Цена: 25.00 euro
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

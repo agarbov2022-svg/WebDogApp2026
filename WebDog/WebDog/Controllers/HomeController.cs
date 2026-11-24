@@ -20,7 +20,7 @@ namespace WebDog.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Accessories()
         {
             return View();
         }
@@ -29,6 +29,10 @@ namespace WebDog.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult Contacts()
+        {
+            return View();
         }
     }
 }
