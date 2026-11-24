@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 using WebDog.Infrastructure.Data;
 
+using WebDogApp.Core.Contracts;
+using WebDogApp.Core.Services;
+using WebDogApp.Infrastructure.Data.Infrastructure;
+
 namespace WebDog
 {
     public class Program
@@ -13,8 +17,11 @@ namespace WebDog
 
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            
+            builder.Services.AddDbContext<ApplicationDbContext>(options => 
+            options.UseLazyLoadingProxies().
+            UseSqlServer(connectionString));
+
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options =>
@@ -28,7 +35,11 @@ namespace WebDog
             }).AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddTransient<IBreedServices,BreedService>();
+
             var app = builder.Build();
+
+            app.PrepareDatabase();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
