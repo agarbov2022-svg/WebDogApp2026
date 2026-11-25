@@ -33,3 +33,63 @@
         </div>
     </div>
 </div>
+<style>
+    .carousel-item {
+        height: 450px;
+        width: 1200px;
+    }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+</style>
+
+<!-- Bootstrap 5 Слайдшоу -->
+<div id="carouselExample" class="carousel slide">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbGzzY3xe4dCnVAiLYZFIOVt1OUg4McLE-oXNHoTMfQ&s=10"
+                 class="d-block w-100"
+                 alt="Снимка 1">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1vzdbZUCTd6VX56Dbz8zjrcqMhFyMRxSPeleZvZiyQ&s=10"
+                 class="d-block w-100"
+                 alt="Снимка 2">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaY-OcIyRC8IKBDJq8UJOchz2jDuDxMThOuSdGL5wnJw&s=10"
+                 class="d-block w-100"
+                 alt="Снимка 3">
+        </div>
+
+    </div>
+
+    <!-- Previous button -->
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <!-- Next button -->
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next">
+
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</div>
