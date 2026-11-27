@@ -4,6 +4,7 @@ namespace WebDog.Models.Dog
 {
     public class DeleteVM
     {
+        public int Id { get; set; } 
         [Required]
         [MaxLength(30)]
 
