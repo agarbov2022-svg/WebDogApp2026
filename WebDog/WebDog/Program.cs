@@ -36,6 +36,7 @@ namespace WebDog
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddTransient<IBreedServices,BreedService>();
+            builder.Services.AddTransient<IDogServices,DogService>();
 
             var app = builder.Build();
 
